@@ -7,16 +7,22 @@
 } */
 
 .main-container {
-  background-color: beige;
+  /* background-color: beige; */
   min-height: 100vh;
-
-  display: flex;
+  /* display: flex;
   align-items: center;
-  flex-direction: column;
-  /* gap: 50px; */
+  flex-direction: column; */
 
 }
 
+.question-input,
+.difficulty-input {
+  padding-top: 20px;
+}
+
+/* .difficulty-input {
+  padding-top: 20px;
+} */
 h1 {
   color: red;
   font-size: 72px;
@@ -35,12 +41,119 @@ h1 {
 
 .form-container > div {
   width: 100%;
+}
+
  
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   display: block;
-  padding-bottom: 10px;
-  font-size: 24px;
-  
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6DD5FA, #2980B9);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px; /* Adds space above the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #58c1e8, #2d5a85);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Adds a slight upward shift on hover */
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.success {
+  color: green;
+  margin-top: 1rem;
+}
+
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
 }
